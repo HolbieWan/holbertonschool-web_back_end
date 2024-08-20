@@ -43,7 +43,9 @@ class Server:
                 integer"
 
         data_list = self.dataset()
-
         start_index, end_index = index_range(page, page_size)
-        return data_list[start_index:end_index] if start_index < \
-            len(data_list) else []
+
+        if start_index < len(data_list):
+            return data_list[start_index:end_index]
+        else:
+            return []
