@@ -55,7 +55,6 @@ class Server:
         count = 0
         max_index = max(indexed_data.keys())
 
-        # Iterate to collect `page_size` elements, skipping deleted ones
         while count < page_size and current_index <= max_index:
             if current_index in indexed_data:
                 data.append(indexed_data[current_index])
