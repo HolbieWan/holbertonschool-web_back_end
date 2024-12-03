@@ -28,7 +28,7 @@ age: int = 25
 + **How:**
     + Use : to annotate parameters and -> for return values. Variable annotations use :.
 
-+ **Example:**
+### **Examples:**
 
 **1. Function Returning an Integer:**
 
@@ -39,7 +39,51 @@ def add_numbers(a: int, b: int) -> int:
 x: float = 3.14
 ```
 
+**2. Function Returning a List of Strings**
 
+```python
+from typing import List
+
+def get_names() -> List[str]:
+    return ["Alice", "Bob", "Charlie"]
+```
+
+**3. Function Returning None**
+
+```python
+def greet(name: str) -> None:
+    print(f"Hello, {name}!")
+```
+
+**4. Function Returning a Tuple**
+
+```python
+def get_point() -> tuple[int, int]:
+    return (3, 4)
+```
+
+**5. Function Returning a Union of Types**
+
++ If the function can return multiple types, use Union (or | in Python 3.10+):
+
+```python
+from typing import Union
+
+def parse_number(s: str) -> Union[int, float]:
+    return int(s) if s.isdigit() else float(s)
+```
+
+**6. Function Returning Callable**
+
++ If the function returns another function (or callable object):
+
+```python
+from typing import Callable
+
+def multiplier(factor: int) -> Callable[[int], int]:
+    return lambda x: x * factor
+```
++ This specifies that the function returns a callable that takes an int and returns an int.
 
 ---
 
