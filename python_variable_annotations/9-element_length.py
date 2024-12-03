@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-from typing import Iterable, Sequence, List, Tuple
 """Module with function that takes a list of iterables
 and returns a list of tuples"""
+
+from typing import Iterable, Sequence, List, Tuple
 
 
 def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:

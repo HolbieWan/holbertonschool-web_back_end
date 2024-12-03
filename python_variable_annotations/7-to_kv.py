@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-from typing import Tuple
 """Module with a function that takes 2 arguments
 and returns them in a tuple"""
+
+from typing import Tuple
 
 
 def to_kv(k: str, v: int | float) -> Tuple[str, float]:
