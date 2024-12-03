@@ -2,7 +2,7 @@
 """Module with function to add 2 int"""
 
 
-def add(a: int, b: int) -> int:
+def add(a: int, b: int) -> float:
     """function add that takes a float a and a float b as arguments
     and returns their sum as a float."""
-    return a + b
+    return float(a + b)
