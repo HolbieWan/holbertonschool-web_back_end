@@ -29,12 +29,18 @@ age: int = 25
     + Use : to annotate parameters and -> for return values. Variable annotations use :.
 
 + **Example:**
+
+**1. Function Returning an Integer:**
+
 ```python
 def add_numbers(a: int, b: int) -> int:
     return a + b
 
 x: float = 3.14
 ```
+
+
+
 ---
 
 ## Duck Typing
