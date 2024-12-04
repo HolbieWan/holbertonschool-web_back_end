@@ -3,7 +3,7 @@
 
 import asyncio
 from typing import List
-bubble_sort = __import__('bubble_sort').bubble_sort
+# bubble_sort = __import__('bubble_sort').bubble_sort
 task_wait_random = __import__('3-tasks').task_wait_random
 
 
@@ -18,8 +18,8 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
         delays_list.append(result)
         i += 1
     result_list = await asyncio.gather(*delays_list)
-    bubble_sort(result_list)
-    return result_list
+    sorted_result_list = sorted(result_list)
+    return sorted_result_list
 
 # better way:
     # task = [task_wait_random(max_delay) for _ in range(n)]
