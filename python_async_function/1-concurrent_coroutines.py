@@ -14,8 +14,9 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     i = 0
     delays_list = []
     while(i < n):
-        result = await wait_random(max_delay)
+        result = wait_random(max_delay)
         delays_list.append(result)
         i += 1
-    bubble_sort(delays_list)
-    return delays_list
+    result_list = await asyncio.gather(*delays_list)
+    bubble_sort(result_list)
+    return result_list
