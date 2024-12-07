@@ -1,7 +1,4 @@
-# holbertonschool-web_back_end
-
-## Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+# ES6 Basics
 
 + What ES6 is
 + New features introduced in ES6
