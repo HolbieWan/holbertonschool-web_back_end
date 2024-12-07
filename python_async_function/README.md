@@ -1,5 +1,15 @@
 # Python - Asynchronous execution & programming
 
+## Learning Objectives
+
++ async and await syntax
++ How to execute an async program with asyncio
++ How to run concurrent coroutines
++ How to create asyncio tasks
++ How to use the random module
+
+---
+
 Coroutines and the async/await syntax in Python are used to write asynchronous code that can perform tasks concurrently without the need for threads or processes. This is particularly useful for I/O-bound tasks, like web requests or database queries, where you’d otherwise be waiting for a response and wasting CPU cycles and where traditional threading or multiprocessing might be overkill or introduce unnecessary complexity.
 
 ## Basic Concepts:

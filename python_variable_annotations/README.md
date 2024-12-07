@@ -1,4 +1,12 @@
-# Type Annotations in Python 3
+# Type Annotations in Python3
+
+## Learning Objectives
+
++ Type annotations in Python 3
++ How you can use type annotations to specify function signatures and variable types
++ Duck typing
++ How to validate your code with mypy
+___
 
 + **What:**
     + Type annotations allow developers to specify the expected data types of variables, function arguments, and return values in Python. This helps improve code readability and maintainability.
