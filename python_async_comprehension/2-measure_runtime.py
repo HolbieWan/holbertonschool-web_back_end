@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Module with coroutine: measure_runtime"""
 import asyncio
-from typing import List
 import time
 
 async_comprehension = __import__('1-async_comprehension').async_comprehension
