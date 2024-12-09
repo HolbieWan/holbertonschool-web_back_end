@@ -39,18 +39,23 @@ class Server:
             }
         return self.__indexed_dataset
 
-    def get_hyper_index(self, index: int, page_size: int = 10) -> Dict:
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """Method that returns a paginated subset of the dataset with metadata
         including index, page size, and next index."""
-        dataset = self.dataset()
+        dataset = self.indexed_dataset()
         assert 0 <= index < len(dataset)
-        next_index = index + 1
-        start = index
-        end = index + page_size
+        output_data = []
+        next_index = index
+
+        while len(output_data) < page_size:
+            item = dataset.get(next_index)
+            if item is not None:
+                output_data.append(item)
+            next_index += 1
 
         return {
             "index": index,
-            "data": dataset[start:end],
+            "data": output_data,
             "page_size": page_size,
             "next_index": next_index
         }
