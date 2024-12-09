@@ -5,7 +5,7 @@ import math
 from typing import Tuple, List
 
 
-def index_range(page: int, page_size: int) -> Tuple[int, int]:
+def index_range(page: int, page_size: int) -> tuple:
     '''function that takes two integer arguments page and page_size
     and returns a tuple of size two containing a start index and an end index
     corresponding to the range of indexes'''
