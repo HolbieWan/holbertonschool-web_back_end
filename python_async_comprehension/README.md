@@ -69,10 +69,10 @@ When type-annotating generators, you specify the types of the values it yields a
 from typing import AsyncGenerator
 import asyncio
 
-async def async_generator() -> AsyncGenerator[int, None]:
-    for i in range(5):
-        await asyncio.sleep(1)
-        yield i
+async def async_generator() -> Generator[YieldType, SendType, ReturnType]:
+    # for i in range(5):
+    #     await asyncio.sleep(1)
+    #     yield i
 
 # Explanation:
 # - `AsyncGenerator[int, None]` means:
