@@ -2,7 +2,7 @@
 '''Module with an helper function: index_range'''
 import csv
 import math
-from typing import Tuple, List
+from typing import Tuple, List, Dict
 
 
 def index_range(page: int, page_size: int) -> tuple:
@@ -42,3 +42,6 @@ class Server:
             return data_list[start_index:end_index]
         else:
             return []
+        
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict{int, int, List[List], int, int, int}:
+        
