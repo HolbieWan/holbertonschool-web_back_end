@@ -26,15 +26,17 @@ print(paginate(data, page=2, page_size=2))  # Output: [3, 4]
 **Example_2:**
 
 Suppose you have a dataset [A, B, C, D, E, F, G, H] and want to paginate it:
+```
+Page 1 (page=1, page_size=3):
+start_index = (1 - 1) * 3 = 0
+end_index = 0 + 3 = 3
+Items: [A, B, C]
 
-	•	Page 1 (page=1, page_size=3):
-	•	start_index = (1 - 1) * 3 = 0
-	•	end_index = 0 + 3 = 3
-	•	Items: [A, B, C]
-	•	Page 2 (page=2, page_size=3):
-	•	start_index = (2 - 1) * 3 = 3
-	•	end_index = 3 + 3 = 6
-	•	Items: [D, E, F]
+Page 2 (page=2, page_size=3):
+start_index = (2 - 1) * 3 = 3
+end_index = 3 + 3 = 6
+Items: [D, E, F]
+```
 
 ## How to paginate a dataset with hypermedia metadata
 Paginate a Dataset with Hypermedia Metadata
