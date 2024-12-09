@@ -149,5 +149,6 @@ sample([10, 20, 30, 40, 50], k=4) # Four samples without replacement
 [40, 10, 50, 30]
 ```
 
+## When to Use Tasks vs. Direct Coroutines
 
-
+![alt text](<Capture d’écran 2024-12-09 à 09.36.54.png>)
