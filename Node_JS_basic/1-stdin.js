@@ -1,20 +1,16 @@
-const readline = require('readline');
+// Program to read user input from stdin and display a message
 
-function wellcome() {
-  const readinput = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-  readinput.question( "Welcome to Holberton School, what is your name? ",
-    (name) => {
-      console.log("Your name is: " + name);
-      readinput.close();
-    });
-  readinput.on('close', () => {
-    console.log("This important software is now closing");
-    process.exit(0);
-  });
-}
-    
-wellcome();
-module.exports = wellcome;
+// Display welcome message
+console.log("Welcome to Holberton School, what is your name?");
+
+// Event listener for input
+process.stdin.on("data", (data) => {
+  const name = data.toString();
+  console.log(`Your name is: ${name}`);
+  process.exit();
+});
+
+// Event listener for program exit
+process.on("exit", () => {
+  console.log("This important software is now closing");
+});
